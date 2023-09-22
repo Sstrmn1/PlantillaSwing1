@@ -15,9 +15,22 @@ public class Main {
         }
 
         // Muestra la ventana principal
-        mostrarVentanaPrincipal();
+//        mostrarVentanaPrincipal();
+        mostrarVentana1();
         mostrarPanelIntro();
-//        mostrarDialogo(3020);
+        mostrarDialogo(3020);
+    }
+
+    public static void mostrarVentana1() {
+        NewJFrame1 frame = new NewJFrame1();
+        // Ajusta el comportamiento de cierre de la ventana
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Centra la ventana en la pantalla
+        frame.setLocationRelativeTo(null);
+
+        // Muestra la ventana
+        frame.setVisible(true);
     }
 
     // Método para mostrar la ventana principal
@@ -52,7 +65,6 @@ public class Main {
 
         // Configura el tiempo en milisegundos antes de que el diálogo se abra automáticamente (3 segundos en este caso)
 //        int tiempoApertura = 3000;
-
         // Crea un temporizador para abrir el diálogo después de 3 segundos
         Timer timer = new Timer(tiempoApertura, new ActionListener() {
             @Override
